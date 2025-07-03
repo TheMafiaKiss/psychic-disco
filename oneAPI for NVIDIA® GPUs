@@ -1,0 +1,25 @@
+Step 1 - Add Intel®'s package signing key and APT repository
+Please run the following command to add Intel's APT signing key and repo to your system.
+
+sudo wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \ | gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null && echo "deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
+Step 2 - Add Codeplay's package signing key and APT repository
+Please run the following command to add Codeplay's APT signing key and repo to your system.
+
+sudo wget -qO - https://developer.codeplay.com/apt/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/codeplay-keyring.gpg > /dev/null && echo "deb [signed-by=/usr/share/keyrings/codeplay-keyring.gpg] https://developer.codeplay.com/apt all main" | sudo tee /etc/apt/sources.list.d/codeplay.list
+Step 3 - Update host apt repository
+Now lets update your APT.
+
+sudo apt update
+Step 3 - Install Packages
+Finally, lets install some packages!
+
+sudo apt install oneapi-nvidia
+sudo apt install oneapi-nvidia-11.7
+sudo apt install oneapi-nvidia-11.8
+sudo apt install oneapi-nvidia-12.0
+sudo apt install oneapi-nvidia-12.1
+sudo apt install oneapi-nvidia-12.2
+sudo apt install oneapi-nvidia-12.3
+sudo apt install oneapi-nvidia-12.4
+sudo apt install oneapi-nvidia-12.5
+sudo apt install oneapi-nvidia-12.6
